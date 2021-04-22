@@ -1,4 +1,6 @@
 <script>
+import Map from './views/Map';
+
 export default {
   name: "App",
 
@@ -84,7 +86,7 @@ export default {
             <v-list-item-title>Домой</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-group v-model="show" prepend-icon="mdi-file-chart">
+        <!--<v-list-group v-model="show" prepend-icon="mdi-file-chart">
           <template v-slot:activator>
             <v-list-item-content>
               <v-list-item-title>Отчеты</v-list-item-title>
@@ -107,7 +109,19 @@ export default {
               <v-list-item-title>30 дней</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-        </v-list-group>
+        </v-list-group>-->
+
+        <v-list-item @click="$router.push({ name: 'Map' })">
+          <v-list-item-icon>
+            <v-icon>mdi-account</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Карты</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+
+
         <v-list-item @click="logout">
           <v-list-item-icon>
             <v-icon>mdi-account</v-icon>
